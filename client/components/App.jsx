@@ -1,26 +1,18 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-
-import { fetchCharacters } from '../actions'
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Character from './Character'
+import Home from './Home'
 
 function App() {
-  const characters = useSelector((state) => state.characters)
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(fetchCharacters())
-  }, [])
-
   return (
     <>
       <div className="app">
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <div className="container">
-          <ul>
-            {characters.map((character) => (
-              <li key={character.characterName}>{character.characterName}</li>
-            ))}
-          </ul>
-        </div>
+        <h1>Character Pandemonium</h1>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/:id" element={<Character />} />
+        </Routes>
       </div>
     </>
   )

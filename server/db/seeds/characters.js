@@ -8,7 +8,7 @@ exports.seed = function (knex) {
         {
           id: 1,
           characterName: 'banana',
-          class: 'bard',
+          dndClass: 'bard',
           level: 2,
           background: 'acolyte',
           playerName: 'edan',
@@ -38,7 +38,7 @@ exports.seed = function (knex) {
         {
           id: 2,
           characterName: 'orange',
-          class: 'wizard',
+          dndClass: 'wizard',
           level: 2,
           background: 'acolyte',
           playerName: 'billy',

@@ -2,7 +2,7 @@ exports.up = function (knex) {
   return knex.schema.createTable('characters', (table) => {
     table.increments('id')
     table.string('characterName')
-    table.string('class')
+    table.string('dndClass')
     table.int('level')
     table.string('background')
     table.string('playerName')

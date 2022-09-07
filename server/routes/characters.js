@@ -17,4 +17,15 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/:id', (req, res) => {
+  const id = req.params.id
+  console.log('character', id)
+  db.getCharacter(id)
+    .then((results) => res.json(results))
+    .catch((err) => {
+      console.log(err)
+      res.status(500).json({ message: 'Something went wrong' })
+    })
+})
+
 module.exports = router

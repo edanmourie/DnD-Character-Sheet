@@ -7,3 +7,7 @@ export function getCharacters() {
     return res.body.characters
   })
 }
+
+export function getCharacter(id) {
+  return request.get(rootUrl + `/characters/${id}`).then((res) => res.body)
+}
