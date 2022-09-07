@@ -1,11 +1,11 @@
-import { getCharacters } from '../../server/db/characters'
+import { getCharacters } from './apis/characters'
 
 export const SET_CHARACTERS = 'SET_CHARACTERS'
 
-export function setCharacters(fruits) {
+export function setCharacters(characters) {
   return {
     type: SET_CHARACTERS,
-    payload: fruits,
+    payload: characters,
   }
 }
 

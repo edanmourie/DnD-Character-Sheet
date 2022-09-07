@@ -7,7 +7,9 @@ const router = express.Router()
 router.get('/', (req, res) => {
   db.getCharacters()
     .then((results) => {
-      res.json({ characters: results.map((character) => character.name) })
+      res.json({
+        characters: results.map((character) => character),
+      })
     })
     .catch((err) => {
       console.log(err)

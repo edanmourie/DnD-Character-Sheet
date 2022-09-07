@@ -14,11 +14,13 @@ function App() {
     <>
       <div className="app">
         <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
-          {characters.map((character) => (
-            <li key={character}>{character}</li>
-          ))}
-        </ul>
+        <div className="container">
+          <ul>
+            {characters.map((character) => (
+              <li key={character.characterName}>{character.characterName}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   )

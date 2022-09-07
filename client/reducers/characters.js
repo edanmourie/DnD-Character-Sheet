@@ -1,4 +1,4 @@
-import { SET_CHARACTERS } from '../actions'
+import { SET_CHARACTERS } from '../actions/index.js'
 
 const initialState = []
 
