@@ -16,15 +16,44 @@
   margin: auto
 }
 
+.charContainer {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  border-color: purple;
+  border-style: solid;
+}
+
 .charHome{
   border-color: green;
   border-style: solid;
+  text-align: center;
   margin:1rem;
   padding: 0.5rem;
 }
 
+.charBase{
+  border-color: blueviolet;
+  border-style: dotted;
+  justify-content: center;
+  margin: 0.5rem
+}
+
 .deleteButton{
   margin: 1rem;
+}
+
+.linkButton {
+  border-color: black;
+  border-style: solid;
+}
+
+.linkButtonDiv{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 ul {

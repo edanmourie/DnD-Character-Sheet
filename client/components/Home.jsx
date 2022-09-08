@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 
 function home() {
   const characters = useSelector((state) => state.characters)
-  console.log(characters)
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchCharacters())
@@ -20,7 +19,11 @@ function home() {
                 {characterName} | {race + ' '}
                 {dndClass + ' '}
                 {'' + level} | By: {playerName}
-                <Link to={`/${id}`}>View/Edit</Link>
+                <div className="linkButtonDiv">
+                  <Link to={`/${id}`}>
+                    <button className="linkButton">View/Edit</button>
+                  </Link>
+                </div>
               </li>
             </div>
           )
