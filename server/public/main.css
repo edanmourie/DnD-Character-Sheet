@@ -39,6 +39,24 @@
   margin: 0.5rem
 }
 
+.statBlock{
+  border-color: green;
+  border-style: solid;
+  width: 10rem;
+  text-align: center;
+}
+
+.stat{
+  border-color: greenyellow;
+  border-style:groove;
+}
+
+.statMod {
+  border-color: green;
+  border-style: dotted;
+  border-radius: 50%;
+}
+
 .deleteButton{
   margin: 1rem;
 }

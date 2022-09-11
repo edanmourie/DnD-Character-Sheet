@@ -8,7 +8,6 @@ function App() {
     <>
       <div className="app">
         <h1>Character Pandemonium</h1>
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:id" element={<Character />} />
