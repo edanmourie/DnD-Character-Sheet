@@ -16,11 +16,6 @@ function character() {
 
   return character ? (
     <>
-      <div className="linkButtonDiv">
-        <Link to="/">
-          <button className="linkButton">Go back to Home</button>
-        </Link>
-      </div>
       <div className="charContainer">{<CharTopper />}</div>
       <div className="statBlock">{<CharStats />}</div>
     </>

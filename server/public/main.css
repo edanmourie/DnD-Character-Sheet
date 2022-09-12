@@ -40,6 +40,8 @@
 }
 
 .statBlock{
+  display: flex;
+  flex-direction: column;
   border-color: green;
   border-style: solid;
   width: 10rem;

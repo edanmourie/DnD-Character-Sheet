@@ -27,4 +27,15 @@ router.get('/:id', (req, res) => {
     })
 })
 
+router.post('/addCharacter', (req, res) => {
+  const character = req.body
+  console.log(character)
+  db.addCharacter(character)
+    .then((results) => res.json(results))
+    .catch((err) => {
+      console.log(err)
+      res.status(500).json({ message: 'Something went wrong' })
+    })
+})
+
 module.exports = router

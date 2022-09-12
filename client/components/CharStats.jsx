@@ -1,18 +1,23 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { modCalcs } from './modCalcs'
+import {
+  strCalc,
+  dexCalc,
+  conCalc,
+  intCalc,
+  wisCalc,
+  chaCalc,
+} from './modCalcs'
 
 function charStats() {
   const character = useSelector((state) => state.character)
 
-  modCalcs((res) => console.log(res))
-
-  let strMod = 0
-  let dexMod = 0
-  let conMod = 0
-  let intMod = 0
-  let wisMod = 0
-  let chaMod = 0
+  let strMod = strCalc(character.str)
+  let dexMod = dexCalc(character.dex)
+  let conMod = conCalc(character.con)
+  let intMod = intCalc(character.int)
+  let wisMod = wisCalc(character.wis)
+  let chaMod = chaCalc(character.cha)
 
   return (
     <>
