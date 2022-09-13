@@ -21,41 +21,56 @@ function charStats() {
 
   return (
     <>
-      <div className="stat">
-        <h1>
-          Strength <p>{character.str}</p>
-        </h1>
-        <div className="statMod">{strMod}</div>
-      </div>
-      <div className="stat">
-        <h1>
-          Dexterity <p>{character.dex}</p>
-        </h1>
-        <div className="statMod">{dexMod}</div>
-      </div>
-      <div className="stat">
-        <h1>
-          Constitution <p>{character.con}</p>
-        </h1>
-        <div className="statMod">{conMod}</div>
-      </div>
-      <div className="stat">
-        <h1>
-          Intelligence <p>{character.int}</p>
-        </h1>
-        <div className="statMod">{intMod}</div>
-      </div>
-      <div className="stat">
-        <h1>
-          Wisdom <p>{character.wis}</p>
-        </h1>
-        <div className="statMod">{wisMod}</div>
-      </div>
-      <div className="stat">
-        <h1>
-          Charisma <p>{character.cha}</p>
-        </h1>
-        <div className="statMod">{chaMod}</div>
+      <div>
+        <div className="statContainer">
+          <div>
+            <h1>
+              Strength <p>{character.str}</p>
+            </h1>
+            <div className="statMod">{strMod}</div>
+          </div>
+          <div>
+            <h1>
+              Dexterity <p>{character.dex}</p>
+            </h1>
+            <div className="statMod">{dexMod}</div>
+          </div>
+          <div>
+            <h1>
+              Constitution <p>{character.con}</p>
+            </h1>
+            <div className="statMod">{conMod}</div>
+          </div>
+          <div>
+            <h1>
+              Intelligence <p>{character.int}</p>
+            </h1>
+            <div className="statMod">{intMod}</div>
+          </div>
+          <div>
+            <h1>
+              Wisdom <p>{character.wis}</p>
+            </h1>
+            <div className="statMod">{wisMod}</div>
+          </div>
+          <div>
+            <h1>
+              Charisma <p>{character.cha}</p>
+            </h1>
+            <div className="statMod">{chaMod}</div>
+          </div>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="inspiration"
+            name="inspiration"
+            value="inspiration"
+          ></input>
+          <label htmlFor="inspiration">
+            <h1>Inspiration</h1>
+          </label>
+        </div>
       </div>
     </>
   )

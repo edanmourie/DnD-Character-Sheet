@@ -14,10 +14,11 @@ function App() {
           <Link to="/">
             <button className="linkButton">Go back to Home</button>
           </Link>
+          <Link to={'/addCharacter'}>
+            <button className="addCharButton">Create new character!</button>
+          </Link>
         </div>
-        <Link to={'/addCharacter'}>
-          <button>Create new character!</button>
-        </Link>
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/addCharacter" element={<AddCharacter />} />

@@ -7,6 +7,12 @@
   border-style: solid;
 }
 
+
+/* ------------------------------ */
+/* Home Display*/
+/* ------------------------------ */
+
+
 .container{
   display: flex;
   justify-content: center;
@@ -14,14 +20,6 @@
   border-style: solid;
   width: 33%;
   margin: auto
-}
-
-.charContainer {
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  border-color: purple;
-  border-style: solid;
 }
 
 .charHome{
@@ -32,6 +30,18 @@
   padding: 0.5rem;
 }
 
+/* ------------------------------ */
+/* Character View/Edit */
+/* ------------------------------ */
+
+.charContainer {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  border-color: purple;
+  border-style: solid;
+}
+
 .charBase{
   border-color: blueviolet;
   border-style: dotted;
@@ -40,15 +50,16 @@
 }
 
 .statBlock{
-  display: flex;
-  flex-direction: column;
+
   border-color: green;
   border-style: solid;
-  width: 10rem;
+  width: 15rem;
   text-align: center;
 }
 
-.stat{
+.statContainer{
+  display: flex;
+  flex-direction: column;
   border-color: greenyellow;
   border-style:groove;
 }
@@ -57,7 +68,13 @@
   border-color: green;
   border-style: dotted;
   border-radius: 50%;
+  width:15%;
+  margin: auto;
 }
+
+/* ------------------------------ */
+/* Buttons */
+/* ------------------------------ */
 
 .deleteButton{
   margin: 1rem;
@@ -75,6 +92,10 @@
   align-items: center;
   
 }
+
+/* ------------------------------ */
+/* Lists */
+/* ------------------------------ */
 
 ul {
   list-style-type: none;
