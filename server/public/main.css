@@ -2,9 +2,12 @@
 /* justify-content */
 /* align-items */
 
+
+
 .app{
   border-color:aqua;
   border-style: solid;
+  font-family: 'Cabin', sans-serif;
 }
 
 
@@ -49,19 +52,26 @@
   margin: 0.5rem
 }
 
-.statBlock{
-
+.statContainer{
+  display: flex;
+  flex-direction: row;
   border-color: green;
   border-style: solid;
-  width: 15rem;
   text-align: center;
+  flex-wrap:wrap;
+  column-count: 2;
 }
 
-.statContainer{
+.statBlock{
   display: flex;
   flex-direction: column;
   border-color: greenyellow;
   border-style:groove;
+}
+
+.stat {
+  border-color: pink;
+  border-style: double;
 }
 
 .statMod {
@@ -69,6 +79,28 @@
   border-style: dotted;
   border-radius: 50%;
   width:15%;
+  margin: auto;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  border-color: blue;
+  border-style: dotted;
+}
+
+.profBonus {
+  display: flex;
+  flex-direction: row;
+  border-color: lightcoral;
+  border-style: dotted;
+}
+
+.pbt {
+  border-color: lightcoral;
+  border-style: solid;
+  border-radius: 50%;
+  width: 20%;
   margin: auto;
 }
 

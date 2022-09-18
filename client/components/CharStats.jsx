@@ -7,6 +7,7 @@ import {
   intCalc,
   wisCalc,
   chaCalc,
+  profBonusCalc,
 } from './modCalcs'
 
 function charStats() {
@@ -18,58 +19,67 @@ function charStats() {
   let intMod = intCalc(character.int)
   let wisMod = wisCalc(character.wis)
   let chaMod = chaCalc(character.cha)
+  let profBonus = profBonusCalc(character.level)
 
   return (
     <>
-      <div>
-        <div className="statContainer">
-          <div>
+      <div className="statContainer">
+        <div className="statBlock">
+          <div className="stat">
             <h1>
               Strength <p>{character.str}</p>
             </h1>
             <div className="statMod">{strMod}</div>
           </div>
-          <div>
+          <div className="stat">
             <h1>
               Dexterity <p>{character.dex}</p>
             </h1>
             <div className="statMod">{dexMod}</div>
           </div>
-          <div>
+          <div className="stat">
             <h1>
               Constitution <p>{character.con}</p>
             </h1>
             <div className="statMod">{conMod}</div>
           </div>
-          <div>
+          <div className="stat">
             <h1>
               Intelligence <p>{character.int}</p>
             </h1>
             <div className="statMod">{intMod}</div>
           </div>
-          <div>
+          <div className="stat">
             <h1>
               Wisdom <p>{character.wis}</p>
             </h1>
             <div className="statMod">{wisMod}</div>
           </div>
-          <div>
+          <div className="stat">
             <h1>
               Charisma <p>{character.cha}</p>
             </h1>
             <div className="statMod">{chaMod}</div>
           </div>
         </div>
-        <div>
-          <input
-            type="radio"
-            id="inspiration"
-            name="inspiration"
-            value="inspiration"
-          ></input>
-          <label htmlFor="inspiration">
-            <h1>Inspiration</h1>
-          </label>
+        <div className="skills">
+          <div>
+            <label htmlFor="inspiration">
+              <h1>Inspiration</h1>
+              <input
+                type="radio"
+                id="inspiration"
+                name="inspiration"
+                value="inspiration"
+              />
+            </label>
+          </div>
+          <div className="profBonus">
+            <h1>
+              <div className="pbt">{profBonus}</div>{' '}
+              <div>Proficiency bonus</div>
+            </h1>
+          </div>
         </div>
       </div>
     </>
