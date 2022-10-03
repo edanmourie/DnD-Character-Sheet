@@ -1,16 +1,9 @@
-# Boilerplate: Fullstack with Sass
+# DnD Character Sheet
 
-## Setup
+## Personal Project
 
-### What's included
+### Why this?
 
-To do:
+I am really in to D&D and love things that make playing the game easier. There are some really amazing character sheet creators out there, such as D&D Beyond, and I was inspired to make something I would actually use.
 
-- [ ] Get all the required information on the Character Sheet
-- [ ] Do the forms for filling in the boxes (Post the UPDATE).
-- [ ] UPDATE reducer etc
-- [ ] Create addCharacter route / sheet
-- [ ] Post the ADD character.
-- [ ] ADD reducer etc.
-
-
+This will be my first passion project after finishing Dev Academy Aotearoa.
