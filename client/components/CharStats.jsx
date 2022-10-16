@@ -84,7 +84,7 @@ function charStats() {
             </h1>
           </div>
           <SavingThrows />
-          {/* TODO: Save saving throws to react state w/ redux, so the checked boxes don't go away on refresh */}
+          {/* TODO (later): Save saving throws to react state w/ redux, so the checked boxes don't go away on refresh */}
         </div>
       </div>
     </>
