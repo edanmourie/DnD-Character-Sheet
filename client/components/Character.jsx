@@ -16,8 +16,8 @@ function character() {
 
   return character ? (
     <>
-      <div className="charContainer">{<CharTopper />}</div>
-      <div className="statBlock">{<CharStats />}</div>
+      <div>{<CharTopper />}</div>
+      <div>{<CharStats />}</div>
     </>
   ) : (
     <div className="linkButtonDiv">

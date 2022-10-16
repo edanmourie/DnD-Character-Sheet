@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app{
+  @apply border-cyan-500 border-2
+}
+
+.container{
+  @apply flex justify-center border-red-500 border-2 w-1/3 m-auto
+}
+
+/* ------------ */
+/* Home Display */
+/* ------------ */
+
+.charHome{
+  @apply border-green-500 border-2 text-center m-4 p-2
+}
+
+/* ------------------- */
+/* Character View/Edit */
+/* ------------------- */
+
+.charContainer {
+  @apply flex flex-row justify-center border-purple-500 border-2
+}
+
+.charBase{
+  @apply border-violet-500 border-dotted border-2 justify-center m-2
+}
+
+.statContainer{
+  @apply flex flex-row border-green-500 border-2 text-center flex-wrap
+}
+
+.statBlock{
+  @apply flex flex-col border-green-500 border-2 w-40 text-center
+}
+
+.stat{
+  @apply border-yellow-700 border-2 border-double
+}
+
+.statMod {
+  @apply border-green-500 border-dotted border-2 rounded
+}
+
+.skills {
+  @apply flex flex-col border-blue-500 border-2 border-dotted
+}
+
+.profBonus {
+  @apply flex flex-row border-orange-400 border-dotted border-2
+}
+
+.pbt {
+  @apply border-pink-500 border-2 rounded w-1/5 m-auto
+}
+
+.savingThrows {
+  @apply text-left
+}
+
+/* ------- */
+/* BUTTONS */
+/* ------- */
+
+.deleteButton{
+  @apply m-4
+}
+
+.linkButton {
+  @apply border-black border-2
+}
+
+.linkButtonDiv{
+  @apply flex justify-center text-center
+}
+
+/* ----- */
+/* LISTS */
+/* ----- */
+
+ul {
+  @apply list-none m-0 p-0
+}
