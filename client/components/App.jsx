@@ -9,9 +9,7 @@ function App() {
   return (
     <>
       <div className="app">
-        <h1 className="bg-purple-500 text-red-900 text-2xl container">
-          Character Pandemonium
-        </h1>
+        <h1 className="text-center">Character Pandemonium</h1>
         <div className="linkButtonDiv">
           <Link to="/">
             <button className="linkButton">Go back to Home</button>

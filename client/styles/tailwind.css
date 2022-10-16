@@ -3,81 +3,85 @@
 @tailwind utilities;
 
 .app{
-  border-color:aqua;
-  border-style: solid;
+  @apply border-cyan-500 border-2
 }
 
 .container{
-  display: flex;
-  justify-content: center;
-  border-color: red;
-  border-style: solid;
-  width: 33%;
-  margin: auto
+  @apply flex justify-center border-red-500 border-2 w-1/3 m-auto
 }
 
-.charContainer {
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  border-color: purple;
-  border-style: solid;
-}
+/* ------------ */
+/* Home Display */
+/* ------------ */
 
 .charHome{
-  border-color: green;
-  border-style: solid;
-  text-align: center;
-  margin:1rem;
-  padding: 0.5rem;
+  @apply border-green-500 border-2 text-center m-4 p-2
+}
+
+/* ------------------- */
+/* Character View/Edit */
+/* ------------------- */
+
+.charContainer {
+  @apply flex flex-row justify-center border-purple-500 border-2
 }
 
 .charBase{
-  border-color: blueviolet;
-  border-style: dotted;
-  justify-content: center;
-  margin: 0.5rem
+  @apply border-violet-500 border-dotted border-2 justify-center m-2
+}
+
+.statContainer{
+  @apply flex flex-row border-green-500 border-2 text-center flex-wrap
 }
 
 .statBlock{
-  display: flex;
-  flex-direction: column;
-  border-color: green;
-  border-style: solid;
-  width: 10rem;
-  text-align: center;
+  @apply flex flex-col border-green-500 border-2 w-40 text-center
 }
 
 .stat{
-  border-color: greenyellow;
-  border-style:groove;
+  @apply border-yellow-700 border-2 border-double
 }
 
 .statMod {
-  border-color: green;
-  border-style: dotted;
-  border-radius: 50%;
+  @apply border-green-500 border-dotted border-2 rounded
 }
 
+.skills {
+  @apply flex flex-col border-blue-500 border-2 border-dotted
+}
+
+.profBonus {
+  @apply flex flex-row border-orange-400 border-dotted border-2
+}
+
+.pbt {
+  @apply border-pink-500 border-2 rounded w-1/5 m-auto
+}
+
+.savingThrows {
+  @apply text-left
+}
+
+/* ------- */
+/* BUTTONS */
+/* ------- */
+
 .deleteButton{
-  margin: 1rem;
+  @apply m-4
 }
 
 .linkButton {
-  border-color: black;
-  border-style: solid;
+  @apply border-black border-2
 }
 
 .linkButtonDiv{
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
+  @apply flex justify-center text-center
 }
 
+/* ----- */
+/* LISTS */
+/* ----- */
+
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  @apply list-none m-0 p-0
 }
