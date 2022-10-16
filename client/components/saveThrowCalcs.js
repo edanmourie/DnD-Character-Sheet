@@ -1,19 +1,19 @@
 export function strSaveCalc(str) {
   switch (str) {
     case 1:
-      return 5
+      return -5
     case 2:
     case 3:
-      return 4
+      return -4
     case 4:
     case 5:
-      return 3
+      return -3
     case 6:
     case 7:
-      return 2
+      return -2
     case 8:
     case 9:
-      return 1
+      return -1
     case 10:
     case 11:
       return 0
@@ -54,19 +54,19 @@ export function strSaveCalc(str) {
 export function dexSaveCalc(dex) {
   switch (dex) {
     case 1:
-      return 5
+      return -5
     case 2:
     case 3:
-      return 4
+      return -4
     case 4:
     case 5:
-      return 3
+      return -3
     case 6:
     case 7:
-      return 2
+      return -2
     case 8:
     case 9:
-      return 1
+      return -1
     case 10:
     case 11:
       return 0
@@ -107,19 +107,19 @@ export function dexSaveCalc(dex) {
 export function conSaveCalc(con) {
   switch (con) {
     case 1:
-      return 5
+      return -5
     case 2:
     case 3:
-      return 4
+      return -4
     case 4:
     case 5:
-      return 3
+      return -3
     case 6:
     case 7:
-      return 2
+      return -2
     case 8:
     case 9:
-      return 1
+      return -1
     case 10:
     case 11:
       return 0
@@ -160,19 +160,19 @@ export function conSaveCalc(con) {
 export function intSaveCalc(int) {
   switch (int) {
     case 1:
-      return 5
+      return -5
     case 2:
     case 3:
-      return 4
+      return -4
     case 4:
     case 5:
-      return 3
+      return -3
     case 6:
     case 7:
-      return 2
+      return -2
     case 8:
     case 9:
-      return 1
+      return -1
     case 10:
     case 11:
       return 0
@@ -213,19 +213,19 @@ export function intSaveCalc(int) {
 export function wisSaveCalc(wis) {
   switch (wis) {
     case 1:
-      return 5
+      return -5
     case 2:
     case 3:
-      return 4
+      return -4
     case 4:
     case 5:
-      return 3
+      return -3
     case 6:
     case 7:
-      return 2
+      return -2
     case 8:
     case 9:
-      return 1
+      return -1
     case 10:
     case 11:
       return 0
@@ -266,19 +266,19 @@ export function wisSaveCalc(wis) {
 export function chaSaveCalc(cha) {
   switch (cha) {
     case 1:
-      return 5
+      return -5
     case 2:
     case 3:
-      return 4
+      return -4
     case 4:
     case 5:
-      return 3
+      return -3
     case 6:
     case 7:
-      return 2
+      return -2
     case 8:
     case 9:
-      return 1
+      return -1
     case 10:
     case 11:
       return 0
