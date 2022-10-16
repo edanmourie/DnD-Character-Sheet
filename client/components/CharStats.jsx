@@ -1,5 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+
+import SavingThrows from './SavingThrows'
 import {
   strCalc,
   dexCalc,
@@ -9,14 +11,6 @@ import {
   chaCalc,
   profBonusCalc,
 } from './modCalcs'
-import {
-  strSaveCalc,
-  dexSaveCalc,
-  conSaveCalc,
-  intSaveCalc,
-  wisSaveCalc,
-  chaSaveCalc,
-} from './saveThrowCalcs'
 
 function charStats() {
   const character = useSelector((state) => state.character)
@@ -29,13 +23,6 @@ function charStats() {
   let chaMod = chaCalc(character.cha)
 
   let profBonus = profBonusCalc(character.level)
-
-  let strSave = strSaveCalc(character.str)
-  let dexSave = dexSaveCalc(character.dex)
-  let conSave = conSaveCalc(character.con)
-  let intSave = intSaveCalc(character.int)
-  let wisSave = wisSaveCalc(character.wis)
-  let chaSave = chaSaveCalc(character.cha)
 
   return (
     <>
@@ -96,15 +83,8 @@ function charStats() {
               <div className="pbt">+{profBonus}</div>
             </h1>
           </div>
-          <div className="savingThrows">
-            <div>{strSave + profBonus} Strength</div>
-            <div>{dexSave + profBonus} Dexterity</div>
-            <div>{conSave + profBonus} Constitution</div>
-            <div>{intSave + profBonus} Intelligence</div>
-            <div>{wisSave + profBonus} Wisdom</div>
-            <div>{chaSave + profBonus} Charisma</div>
-            <div className="text-center">Saving Throws</div>
-          </div>
+          <SavingThrows />
+          {/* TODO (later): Save saving throws to react state w/ redux, so the checked boxes don't go away on refresh */}
         </div>
       </div>
     </>
