@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 import SavingThrows from './SavingThrows'
+import SkillChecks from './SkillChecks'
 import {
   strCalc,
   dexCalc,
@@ -85,6 +86,7 @@ function charStats() {
           </div>
           <SavingThrows />
           {/* TODO (later): Save saving throws to react state w/ redux, so the checked boxes don't go away on refresh */}
+          {/* <SkillChecks /> */}
         </div>
       </div>
     </>

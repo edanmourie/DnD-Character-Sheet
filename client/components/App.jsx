@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 
-import Character from './Character'
+import Character from './CharacterSheet/Character'
 import Home from './Home'
 import AddCharacter from './AddCharacter'
 
