@@ -1,76 +1,33 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import {
-  strSaveCalc,
-  dexSaveCalc,
-  conSaveCalc,
-  intSaveCalc,
-  wisSaveCalc,
-  chaSaveCalc,
-} from './saveThrowCalcs'
-import { profBonusCalc } from './modCalcs'
+  strCalc,
+  dexCalc,
+  conCalc,
+  intCalc,
+  wisCalc,
+  chaCalc,
+  profBonusCalc,
+} from './modCalcs'
 
 function SavingThrows() {
   const character = useSelector((state) => state.character)
+
+  let strMod = strCalc(character.str)
+  let dexMod = dexCalc(character.dex)
+  let conMod = conCalc(character.con)
+  let intMod = intCalc(character.int)
+  let wisMod = wisCalc(character.wis)
+  let chaMod = chaCalc(character.cha)
   let profBonus = profBonusCalc(character.level)
 
-  // Setting the starting values of each saving throw.
-  let defStrSave = strSaveCalc(character.str)
-  function baseStrSave() {
-    if (defStrSave >= 0) {
-      return '+' + defStrSave
-    } else {
-      return defStrSave
-    }
-  }
-  let defDexSave = dexSaveCalc(character.dex)
-  function baseDexSave() {
-    if (defDexSave >= 0) {
-      return '+' + defDexSave
-    } else {
-      return defDexSave
-    }
-  }
-  let defConSave = conSaveCalc(character.con)
-  function baseConSave() {
-    if (defConSave >= 0) {
-      return '+' + defConSave
-    } else {
-      return defConSave
-    }
-  }
-  let defIntSave = intSaveCalc(character.int)
-  function baseIntSave() {
-    if (defIntSave >= 0) {
-      return '+' + defIntSave
-    } else {
-      return defIntSave
-    }
-  }
-  let defWisSave = wisSaveCalc(character.wis)
-  function baseWisSave() {
-    if (defWisSave >= 0) {
-      return '+' + defWisSave
-    } else {
-      return defWisSave
-    }
-  }
-  let defChaSave = chaSaveCalc(character.cha)
-  function baseChaSave() {
-    if (defChaSave >= 0) {
-      return '+' + defChaSave
-    } else {
-      return defChaSave
-    }
-  }
-
-  //Setting the state to the base value of the saving throw, as calculated above.
-  const [strSave, setStrSave] = useState(baseStrSave())
-  const [dexSave, setDexSave] = useState(baseDexSave())
-  const [conSave, setConSave] = useState(baseConSave())
-  const [intSave, setIntSave] = useState(baseIntSave())
-  const [wisSave, setWisSave] = useState(baseWisSave())
-  const [chaSave, setChaSave] = useState(baseChaSave())
+  //Setting the state to the base value of the saving throw, as calculated in the functions above.
+  const [strBonus, setStrBonus] = useState(strMod)
+  const [dexBonus, setDexBonus] = useState(dexMod)
+  const [conBonus, setConBonus] = useState(conMod)
+  const [intBonus, setIntBonus] = useState(intMod)
+  const [wisBonus, setWisBonus] = useState(wisMod)
+  const [chaBonus, setChaBonus] = useState(chaMod)
 
   const [strChecked, setStrChecked] = useState(false)
   const [dexChecked, setDexChecked] = useState(false)
@@ -80,149 +37,163 @@ function SavingThrows() {
   const [chaChecked, setChaChecked] = useState(false)
 
   //Setting the value of the saving throw depending on whether the checkbox is checked or not.
-
   //STRENGTH
-  function strSaveProf() {
+  function strProf() {
     setStrChecked(!strChecked)
   }
   useEffect(() => {
     if (strChecked == true) {
-      let save = defStrSave + profBonus
-      if (save >= 0) {
-        setStrSave('+' + (defStrSave + profBonus))
+      let bonus = strMod + profBonus
+      if (bonus >= 0) {
+        setStrBonus('+' + (strMod + profBonus))
       } else {
-        setStrSave(defStrSave + profBonus)
+        setStrBonus(strMod + profBonus)
       }
     } else if (strChecked == false) {
-      if (defStrSave >= 0) {
-        setStrSave('+' + defStrSave)
+      if (strMod >= 0) {
+        setStrBonus('+' + strMod)
       } else {
-        setStrSave(defStrSave)
+        setStrBonus(strMod)
       }
     }
   }, [strChecked])
+
   //DEXTERITY
-  function dexSaveProf() {
+  function dexProf() {
     setDexChecked(!dexChecked)
   }
   useEffect(() => {
     if (dexChecked == true) {
-      let save = defDexSave + profBonus
-      if (save >= 0) {
-        setDexSave('+' + (defDexSave + profBonus))
+      let bonus = dexMod + profBonus
+      if (bonus >= 0) {
+        setDexBonus('+' + (dexMod + profBonus))
       } else {
-        setDexSave(defDexSave + profBonus)
+        setDexBonus(dexMod + profBonus)
       }
     } else if (dexChecked == false) {
-      if (defDexSave >= 0) {
-        setDexSave('+' + defDexSave)
+      if (dexMod >= 0) {
+        setDexBonus('+' + dexMod)
       } else {
-        setDexSave(defDexSave)
+        setDexBonus(dexMod)
       }
     }
   }, [dexChecked])
+
   //CONSTITUTION
-  function conSaveProf() {
+  function conProf() {
     setConChecked(!conChecked)
   }
   useEffect(() => {
     if (conChecked == true) {
-      let save = defConSave + profBonus
-      if (save >= 0) {
-        setConSave('+' + (defConSave + profBonus))
+      let bonus = conMod + profBonus
+      if (bonus >= 0) {
+        setConBonus('+' + (conMod + profBonus))
       } else {
-        setConSave(defConSave + profBonus)
+        setConBonus(conMod + profBonus)
       }
     } else if (conChecked == false) {
-      if (defConSave >= 0) {
-        setConSave('+' + defConSave)
+      if (conMod >= 0) {
+        setConBonus('+' + conMod)
       } else {
-        setConSave(defConSave)
+        setConBonus(conMod)
       }
     }
   }, [conChecked])
+
   //INTELLIGENCE
-  function intSaveProf() {
+  function intProf() {
     setIntChecked(!intChecked)
   }
   useEffect(() => {
     if (intChecked == true) {
-      let save = defIntSave + profBonus
-      if (save >= 0) {
-        setIntSave('+' + (defIntSave + profBonus))
+      let bonus = intMod + profBonus
+      if (bonus >= 0) {
+        setIntBonus('+' + (intMod + profBonus))
       } else {
-        setIntSave(defIntSave + profBonus)
+        setIntBonus(intMod + profBonus)
       }
     } else if (intChecked == false) {
-      if (defIntSave >= 0) {
-        setIntSave('+' + defIntSave)
+      if (intMod >= 0) {
+        setIntBonus('+' + intMod)
       } else {
-        setIntSave(defIntSave)
+        setIntBonus(intMod)
       }
     }
   }, [intChecked])
+
   //WISDOM
-  function wisSaveProf() {
+  function wisProf() {
     setWisChecked(!wisChecked)
   }
   useEffect(() => {
     if (wisChecked == true) {
-      let save = defWisSave + profBonus
-      if (save >= 0) {
-        setWisSave('+' + (defWisSave + profBonus))
+      let bonus = wisMod + profBonus
+      if (bonus >= 0) {
+        setWisBonus('+' + (wisMod + profBonus))
       } else {
-        setWisSave(defWisSave + profBonus)
+        setWisBonus(wisMod + profBonus)
       }
     } else if (wisChecked == false) {
-      if (defWisSave >= 0) {
-        setWisSave('+' + defWisSave)
+      if (wisMod >= 0) {
+        setWisBonus('+' + wisMod)
       } else {
-        setWisSave(defWisSave)
+        setWisBonus(wisMod)
       }
     }
   }, [wisChecked])
+
   //CHARISMA
-  function chaSaveProf() {
+  function chaProf() {
     setChaChecked(!chaChecked)
   }
   useEffect(() => {
     if (chaChecked == true) {
-      let save = defChaSave + profBonus
-      if (save >= 0) {
-        setChaSave('+' + (defChaSave + profBonus))
+      let bonus = chaMod + profBonus
+      if (bonus >= 0) {
+        setChaBonus('+' + (chaMod + profBonus))
       } else {
-        setChaSave(defChaSave + profBonus)
+        setChaBonus(chaMod + profBonus)
       }
     } else if (chaChecked == false) {
-      if (defChaSave >= 0) {
-        setChaSave('+' + defChaSave)
+      if (chaMod >= 0) {
+        setChaBonus('+' + chaMod)
       } else {
-        setChaSave(defChaSave)
+        setChaBonus(chaMod)
       }
     }
   }, [chaChecked])
 
+  // ----------------------------------------------------
+  // Actual box that is displayed on the character sheet.
+  //-----------------------------------------------------
   return (
-    <div className="savingThrows">
-      <div>
-        <input type="checkbox" onChange={strSaveProf} /> {strSave} Strength
+    <div>
+      <div className="savingThrowsAndChecks">
+        <div>
+          <input type="checkbox" onChange={strProf} /> <u>{strBonus}</u>{' '}
+          Strength
+        </div>
+        <div>
+          <input type="checkbox" onChange={dexProf} /> <u>{dexBonus}</u>{' '}
+          Dexterity
+        </div>
+        <div>
+          <input type="checkbox" onChange={conProf} /> <u>{conBonus}</u>{' '}
+          Consitution
+        </div>
+        <div>
+          <input type="checkbox" onChange={intProf} /> <u>{intBonus}</u>{' '}
+          Intelligence
+        </div>
+        <div>
+          <input type="checkbox" onChange={wisProf} /> <u>{wisBonus}</u> Wisdom
+        </div>
+        <div>
+          <input type="checkbox" onChange={chaProf} /> <u>{chaBonus}</u>{' '}
+          Charisma
+        </div>
+        <div className="text-center ">Saving Throws</div>
       </div>
-      <div>
-        <input type="checkbox" onChange={dexSaveProf} /> {dexSave} Dexterity
-      </div>
-      <div>
-        <input type="checkbox" onChange={conSaveProf} /> {conSave} Consitution
-      </div>
-      <div>
-        <input type="checkbox" onChange={intSaveProf} /> {intSave} Intelligence
-      </div>
-      <div>
-        <input type="checkbox" onChange={wisSaveProf} /> {wisSave} Wisdom
-      </div>
-      <div>
-        <input type="checkbox" onChange={chaSaveProf} /> {chaSave} Charisma
-      </div>
-      <div className="text-center ">Saving Throws</div>
     </div>
   )
 }
