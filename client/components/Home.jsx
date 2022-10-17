@@ -26,6 +26,7 @@ function home() {
                 </div>
               </li>
             </div>
+            // TODO: ADD DELETE BUTTON
           )
         )}
       </ul>

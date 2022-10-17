@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { fetchCharacter } from '../actions'
+import { fetchCharacter } from '../../actions'
 import CharTopper from './CharTopper'
 import CharStats from './CharStats'
 

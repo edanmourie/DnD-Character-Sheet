@@ -19,6 +19,11 @@ function charTopper() {
         </div>
         <div className="charBase">
           <h2>
+            Class: <p>{character.dndClass}</p>
+          </h2>
+        </div>
+        <div className="charBase">
+          <h2>
             Level: <p>{character.level}</p>
           </h2>
         </div>

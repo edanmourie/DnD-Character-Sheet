@@ -68,6 +68,7 @@ export default function addCharacter() {
         form.otherProfAndLang
       )
     )
+    setForm(initialForm)
   }
 
   function handleChange(e) {

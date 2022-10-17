@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 import SavingThrows from './SavingThrows'
+import SkillChecks from './SkillChecks'
 import {
   strCalc,
   dexCalc,
@@ -16,12 +17,29 @@ function charStats() {
   const character = useSelector((state) => state.character)
 
   let strMod = strCalc(character.str)
+  if (strMod >= 0) {
+    strMod = '+' + strMod
+  }
   let dexMod = dexCalc(character.dex)
+  if (dexMod >= 0) {
+    dexMod = '+' + dexMod
+  }
   let conMod = conCalc(character.con)
+  if (conMod >= 0) {
+    conMod = '+' + conMod
+  }
   let intMod = intCalc(character.int)
+  if (intMod >= 0) {
+    intMod = '+' + intMod
+  }
   let wisMod = wisCalc(character.wis)
+  if (wisMod >= 0) {
+    wisMod = '+' + wisMod
+  }
   let chaMod = chaCalc(character.cha)
-
+  if (chaMod >= 0) {
+    chaMod = '+' + chaMod
+  }
   let profBonus = profBonusCalc(character.level)
 
   return (
@@ -84,7 +102,9 @@ function charStats() {
             </h1>
           </div>
           <SavingThrows />
+          <SkillChecks />
           {/* TODO (later): Save saving throws to react state w/ redux, so the checked boxes don't go away on refresh */}
+          {/* <SkillChecks /> */}
         </div>
       </div>
     </>
