@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 
 import {
@@ -27,7 +27,7 @@ function HpAndEquipment() {
 
   return (
     <>
-      <div className="border-2 border-green-500 flex flex-row space-x-4 m-4 p-4">
+      <div className="border-2 border-green-500 flex flex-row space-x-4 m-4 p-4 justify-center">
         <div>
           Armor Class
           <div>{character.ac}</div>
@@ -52,8 +52,8 @@ function HpAndEquipment() {
         Temporary Hit Points
       </div>
       <div className="flex flex-row justify-center">
-        <div className="border-2 border-blue-500 mb-4 ml-4 mr-4 p-4">
-          Total: {character.hitDice}
+        <div className="border-2 border-blue-500 mb-4 ml-4 mr-4 p-4 flex flex-col justify-center">
+          <div>Total: {character.hitDice}</div>
           <div>Hit Dice</div>
         </div>
         <div className="border-2 border-blue-500 mb-4 ml-4 mr-4 p-4">
@@ -81,6 +81,26 @@ function HpAndEquipment() {
           </div>
           <div>Death Saves</div>
         </div>
+      </div>
+      <div className="border-2 border-black p-4 m-4">
+        <div className="border-2 border-gray-500">
+          Weapon // To Hit // Damage
+        </div>
+        Attacks and Spellcasting
+      </div>
+      <div className="border-2 border-pink-700 flex flex-col m-4 p-4">
+        <div className="border-2 border-pink-700 flex flex-row">
+          <div className="border-2 border-cyan-700 flex flex-col justify-items-start w-1/4 items-start h-max">
+            <div>PP</div>
+            <div>GP</div>
+            <div>SP</div>
+            <div>CP</div>
+          </div>
+          <div className="border-2 border-green-500 flex flex-col justify-center items-center w-full">
+            <div>Fill in here</div>
+          </div>
+        </div>
+        <div>Equipment</div>
       </div>
     </>
   )
