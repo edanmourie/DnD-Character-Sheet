@@ -22,7 +22,7 @@ function SkillChecks() {
   const [acroBonus, setAcroBonus] = useState(dexMod)
   const [animBonus, setAnimBonus] = useState(wisMod)
   const [arcanaBonus, setArcanaBonus] = useState(intMod)
-  const [atlhBonus, setAthlBonus] = useState(strMod)
+  const [athlBonus, setAthlBonus] = useState(strMod)
   const [decepBonus, setDecepBonus] = useState(chaMod)
   const [historyBonus, setHistoryBonus] = useState(intMod)
   const [insightBonus, setInsightBonus] = useState(wisMod)
@@ -449,7 +449,7 @@ function SkillChecks() {
         Arcana
       </div>
       <div>
-        <input type="checkbox" onChange={athlProf} /> <u>{atlhBonus}</u>{' '}
+        <input type="checkbox" onChange={athlProf} /> <u>{athlBonus}</u>{' '}
         Athletics
       </div>
       <div>
