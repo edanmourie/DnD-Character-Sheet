@@ -5,6 +5,7 @@ import SavingThrows from './SavingThrows'
 import SkillChecks from './SkillChecks'
 import StatBlock from './StatBlock'
 import HpAndEquipment from './HpAndEquipment'
+import FeaturesAndTraits from './FeaturesAndTraits'
 import { profBonusCalc } from './modCalcs'
 
 function charStats() {
@@ -39,6 +40,9 @@ function charStats() {
         </div>
         <div className="HpAndEquipment">
           <HpAndEquipment />
+        </div>
+        <div className="FeaturesAndTraits">
+          <FeaturesAndTraits />
         </div>
       </div>
     </>
